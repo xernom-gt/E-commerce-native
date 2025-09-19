@@ -18,6 +18,20 @@ function take($table)
     return $rows;
 };
 
+//mengambil semua table barang
+function search($table, $field, $keyword)
+{
+    global $conn;
+
+    $result = mysqli_query($conn, "SELECT * FROM $table WHERE $field LIKE '%$keyword%'");
+
+    $rows = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $rows[] = $row;
+    };
+    return $rows;
+}
+
 
 //membuat id otomatis 
 
@@ -74,4 +88,4 @@ function login($email, $password)
         return false; // login gagal
     }
 }
-// 
+//

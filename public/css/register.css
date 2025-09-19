@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #f8f9fa;
+    background: #fdfcfb; /* putih agak krem */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,14 +17,16 @@ form {
     background: #ffffff;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     width: 350px;
+    border: 1px solid #eee;
 }
 
 form h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #2d3436;
+    color: #6b4f3b; /* coklat elegan sesuai logo */
+    letter-spacing: 1px;
 }
 
 form div {
@@ -34,7 +36,7 @@ form div {
 label {
     display: block;
     margin-bottom: 5px;
-    color: #555;
+    color: #5a4636;
     font-weight: 500;
 }
 
@@ -42,20 +44,21 @@ input {
     width: 100%;
     padding: 10px 12px;
     border-radius: 8px;
-    border: 1px solid #ccc;
-    transition: 0.2s;
+    border: 1px solid #c8b6a6;
+    background: #faf9f7;
+    transition: 0.3s;
     font-size: 14px;
 }
 
 input:focus {
-    border-color: #28a745;
-    box-shadow: 0 0 5px rgba(40,167,69,0.3);
+    border-color: #a07855;
+    box-shadow: 0 0 5px rgba(160, 120, 85, 0.4);
 }
 
 /* input error */
 .input-error {
-    border-color: #e74c3c;
-    box-shadow: 0 0 5px rgba(231,76,60,0.5);
+    border-color: #d46b45;
+    box-shadow: 0 0 5px rgba(212, 107, 69, 0.5);
 }
 
 button {
@@ -63,7 +66,7 @@ button {
     padding: 12px;
     border: none;
     border-radius: 8px;
-    background: #28a745;
+    background: #a07855; /* coklat latte */
     color: white;
     font-size: 15px;
     font-weight: bold;
@@ -72,13 +75,13 @@ button {
 }
 
 button:hover {
-    background: #218838;
+    background: #8b6748; /* sedikit lebih gelap pas hover */
 }
 
 .error-msg, p {
     margin-top: 10px;
     text-align: center;
-    color: #e74c3c;
+    color: #d46b45;
     font-size: 14px;
     font-weight: bold;
 }
