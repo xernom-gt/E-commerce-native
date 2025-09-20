@@ -51,26 +51,26 @@ if (isset($_POST['submit'])) {
         <div>
             <h2>Register</h2>
             <div>
-                <label for="">nama</label>
+                <label for="">Nama</label>
                 <input type="text" name="name" value="<?= $name ?>" id="">
             </div>
             <div>
-                <label for="">email</label>
+                <label for="">Gmail</label>
                 <input type="email" name="email" value="<?= $email ?>" id="">
             </div>
             <div>
-                <label for="">password</label>
+                <label for="">Password</label>
                 <input type="password" name="password" id="">
             </div>
             <div>
-                <label for="">confirm password</label>
+                <label for="">Confirm Password</label>
                 <input type="password" name="cf_password" id="">
             </div>
             <div>
-                <button name="submit">submit</button>
+                <button name="submit">Submit</button>
             </div>
         </div>
-        <a href="./login.php">sudah punya akun?</a>
+        <a href="./login.php">Sudah punya akun?</a>
 
         <?php if ($error): ?>
             <p><?= $error ?></p>

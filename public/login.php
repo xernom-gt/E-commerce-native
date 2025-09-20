@@ -48,17 +48,17 @@ if (isset($_POST['submit'])) {
     <form action="" method="post">
         <h1>Login</h1>
         <div>
-            <label for="">gmail</label>
+            <label for="">Gmail</label>
             <input type="text" name="email" id="">
         </div>
         <div>
-            <label for="">password</label>
+            <label for="">Password</label>
             <input type="password" name="password" id="">
         </div>
         <div>
-            <button type="submit" name="submit">submit</button>
+            <button type="submit" name="submit">Submit</button>
         </div>
-        <a href="register.php">belum punya akun?</a>
+        <a href="register.php">Belum punya akun?</a>
         <?php if ($error): ?>
             <p><?= $error; ?></p>
         <?php endif; ?>
