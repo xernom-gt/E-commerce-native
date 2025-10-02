@@ -35,7 +35,7 @@ function search($table, $field, $keyword)
 
 //membuat id otomatis 
 
-function generateID($conn, $table, $field, $prefix)
+function generateID($table, $field, $prefix)
 {
     global $conn;
 
@@ -63,7 +63,7 @@ function user($name, $email, $password)
 {
     global $conn;
 
-    $id = generateID($conn, "user", "id", "mk");
+    $id = generateID("user", "id", "mk");
 
     $res = mysqli_query($conn, "INSERT INTO `user` (id,name,email,password) VALUES ('$id','$name','$email','$password')");
 
@@ -89,3 +89,14 @@ function login($email, $password)
     }
 }
 //
+
+function details($table, $id)
+{
+    global $conn;
+
+    $id = (int)$id;
+
+    $result = mysqli_query($conn, "SELECT * FROM $table WHERE id_barang=$id");
+
+    return mysqli_fetch_assoc($result);
+}

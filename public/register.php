@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/reg.css">
 </head>
 
 <body>
@@ -70,7 +70,10 @@ if (isset($_POST['submit'])) {
                 <button name="submit">Submit</button>
             </div>
         </div>
-        <a href="./login.php">Sudah punya akun?</a>
+        <center>
+            <a href="./login.php">Sudah punya akun?</a>
+        </center>
+
 
         <?php if ($error): ?>
             <p><?= $error ?></p>

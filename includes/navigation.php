@@ -1,3 +1,9 @@
+<?php
+// cek session user
+$name = isset($_SESSION['user']) ? $_SESSION['user']['name'] : 'tamu';
+?>
+
+<link rel="stylesheet" href="../public/css/navigation.css">
 <header>
   <nav class="navbar">
     <!-- logo -->
@@ -18,8 +24,24 @@
 
     <!-- menu -->
     <ul class="nav-links">
-      <li><a href="#">Keranjang</a></li>
-      <li><a href="#">Settings</a></li>
+      <li>
+        <div class="profile" onclick="toggleProfile()">
+          <img src="../uploads/profile.png <?= !empty($_SESSION['user']['gambar']) ? $_SESSION['user']['gambar'] : 'default.png'; ?>" alt="<?= $_SESSION['user']['gambar'] ?>">
+          <p><?= $name ?></p>
+        </div>
+
+        <div class="settings">
+          <p><a href="cart.php">Keranjang</a></p>
+          <p><a href="http://">Admin</a></p>
+          <p><a href="http://">Log out</a></p>
+        </div>
+
+      </li>
     </ul>
   </nav>
 </header>
+
+<script src="../public/javascript/nav.js"></script>
+<script>
+
+</script>
