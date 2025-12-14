@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-require_once('../../../config/connect.php');
+require_once('./config/connect.php');
+require_once('./config/function.php');
 
 $id = $_GET['id'];
 
@@ -74,7 +75,7 @@ if (isset($_POST['submit'])) {
   <div class="product-list">
 
     <div id="wrapper">
-    <?php include_once("./auth/includes/nav.php") ?>
+    <?php include_once('./auth/includes/nav.php') ?>
 
       <main>
         <form method="post" enctype="multipart/form-data" class="product-card">
