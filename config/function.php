@@ -100,3 +100,5 @@ function details($table, $id)
 
     return mysqli_fetch_assoc($result);
 }
+
+

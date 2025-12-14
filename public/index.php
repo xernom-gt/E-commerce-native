@@ -10,7 +10,12 @@ $keyword = isset($_GET['q']) ? $_GET['q'] : '';
 $barang = ($keyword != '')
   ? search("barang", "nama_barang", $keyword)
   : take("barang");
+
+
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

@@ -1,0 +1,166 @@
+/* ====== RESET DASAR ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    background: #f9f8f6;
+    color: #2d2d2d;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 120px 20px 40px;
+  }
+  
+  /* ====== KONTAINER PRODUK ====== */
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 50px 60px;
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  /* ====== TOMBOL KEMBALI ====== */
+  .product-container > button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #ede7e3;
+    color: #5a4636;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 18px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .product-container > button:hover {
+    background: #d9c7b8;
+  }
+  
+  /* ====== GAMBAR PRODUK ====== */
+  .product-container img {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    background: #fafafa;
+    transition: transform 0.3s ease;
+  }
+  
+  /* ====== DETAIL PRODUK ====== */
+  .product-details {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .product-details h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #3a2d20;
+  }
+  
+  .info {
+    flex-grow: 1;
+  }
+  
+  .info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #4a3e33;
+  }
+  
+  /* ====== FORM BAGIAN BAWAH ====== */
+  form {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  label {
+    font-weight: 500;
+  }
+  
+  input[type="number"] {
+    width: 70px;
+    padding: 8px;
+    border: 1px solid #d2c1b0;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    transition: border-color 0.2s;
+  }
+  
+  input[type="number"]:focus {
+    border-color: #b89579;
+    outline: none;
+  }
+  
+  button[name="submit"] {
+    background: #b89579;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  
+  button[name="submit"]:hover {
+    background: #a88367;
+    transform: translateY(-2px);
+  }
+  
+  /* ====== RESPONSIVE ====== */
+  @media (max-width: 900px) {
+    .product-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+    }
+  
+    .product-container img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .product-details {
+      text-align: center;
+    }
+  
+    form {
+      justify-content: center;
+    }
+  
+    .product-container > button {
+      position: relative;
+      top: auto;
+      left: auto;
+      margin-bottom: 20px;
+    }
+  }
+  

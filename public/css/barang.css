@@ -1,0 +1,161 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Ganti font-family jika Anda tidak memiliki font Poppins */
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    background: #f8f5f2; /* warna krem lembut */
+    color: #3e3227; /* coklat tua elegan */
+}
+
+/* ===== MAIN CONTAINER (Menggantikan <main> di kode Anda) ===== */
+/* Karena HTML Anda tidak menggunakan tag <main>, kita fokus pada body dan div di dalamnya */
+.product-list-container {
+    max-width: 1200px;
+    /* Memberi ruang di bawah navbar yang biasanya fixed di atas */
+    margin: 100px auto 50px; 
+    padding: 20px;
+}
+
+/* ===== TAMBAH BARANG BUTTON (ADMIN) ===== */
+.add-button-container {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.add-button-container a {
+    padding: 10px 20px;
+    background: #5c8d62; /* Hijau yang lebih elegan */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(92, 141, 98, 0.4);
+}
+
+.add-button-container a:hover {
+    background: #4a7750;
+    box-shadow: 0 4px 8px rgba(92, 141, 98, 0.5);
+}
+
+
+/* ===== PRODUCT LIST (Container untuk kartu) ===== */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Ganti dari center ke start untuk tampilan admin */
+    gap: 25px;
+}
+
+/* ===== PRODUCT CARD ===== */
+.product-card {
+    background: #fffaf6; /* putih gading */
+    border-radius: 16px;
+    border: 1px solid #e5d4c3;
+    width: 250px; /* Sedikit lebih lebar untuk aksi admin */
+    overflow: hidden;
+    transition: all 0.3s ease;
+    /* Hapus cursor: pointer jika card tidak diklik, atau tambahkan kembali jika iya */
+    text-align: left; 
+    box-shadow: 0 3px 8px rgba(110, 84, 60, 0.08);
+    display: flex; /* Menggunakan flex untuk mengatur konten dalam card */
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-4px); /* Mengurangi efek hover agar tidak terlalu dramatis */
+    box-shadow: 0 6px 14px rgba(110, 84, 60, 0.12);
+}
+
+/* ===== IMAGE ===== */
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #e9d9c8;
+}
+
+/* ===== PRODUCT INFO ===== */
+.product-info {
+    padding: 15px 16px 10px; /* Kurangi padding bawah */
+    flex-grow: 1; /* Memastikan info mengisi ruang, mendorong aksi ke bawah */
+}
+
+.product-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4c3b2f;
+    margin-bottom: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.price {
+    color: #8b5e3c;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.stock {
+    font-size: 0.9rem;
+    color: #7c6a5b;
+}
+
+/* ===== ACTIONS (ADMIN LINKS) ===== */
+.actions {
+    padding: 10px 16px 15px;
+    border-top: 1px solid #f0e6da;
+    display: flex;
+    justify-content: space-around;
+}
+
+.actions a {
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.actions a:first-child {
+    color: #4682b4; /* Warna biru untuk Edit */
+}
+
+.actions a:last-child {
+    color: #b22222; /* Warna merah untuk Hapus */
+}
+
+.actions a:hover {
+    opacity: 0.7;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .product-list {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 90%;
+    }
+
+    .product-list-container {
+        padding: 15px;
+    }
+}

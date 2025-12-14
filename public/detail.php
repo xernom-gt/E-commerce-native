@@ -1,10 +1,10 @@
 <?php
+session_start();
 require_once('../includes/navigation.php');
 
 require_once('../config/function.php');
 require_once('../config/connect.php');
 
-session_start();
 $id = isset($_GET['id']) ? $_GET['id'] : 0; 
 $barang = details('barang', $id);
 
