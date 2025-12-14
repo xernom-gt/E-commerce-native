@@ -1,6 +1,6 @@
 <?php
-require_once('./config/connect.php');
-require_once('./config/function.php');
+require_once('../../config/connect.php');
+require_once('../../config/function.php');
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];

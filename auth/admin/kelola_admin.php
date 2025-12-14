@@ -98,8 +98,8 @@ $users = take('user');
                             <td><?= htmlspecialchars($user['email']) ?></td>
                             <td><?= htmlspecialchars($user['role'] ?? 'user') ?></td>
                             <td>
-                                <a href="edit_user.php?id=<?= $user['id'] ?>" class="edit-btn">Edit</a>
-                                <a href="delete_user.php?id=<?= $user['id'] ?>" class="delete-btn"
+                                <a href="edituser.php?id=<?= $user['id'] ?>" class="edit-btn">Edit</a>
+                                <a href="deleteuser.php?id=<?= $user['id'] ?>" class="delete-btn"
                                     onclick="return confirm('Yakin ingin menghapus user <?= $user['name'] ?>?')">Hapus</a>
                             </td>
                         </tr>
